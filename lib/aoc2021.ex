@@ -1,18 +1,13 @@
 defmodule Aoc2021 do
   @moduledoc """
-  Documentation for `Aoc2021`.
+  Compiled solutions for Advent of Code 2021: https://adventofcode.com/2021
   """
 
-  @doc """
-  Hello world.
+  alias Aoc2021.Day1, as: Day1
 
-  ## Examples
-
-      iex> Aoc2021.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def solve do
+    # Day 1
+    IO.puts "Day1, part 1: #{Day1.refactor_part1()}"
+    IO.puts "Day1, part 2: #{Day1.refactor_part2()}"
   end
 end

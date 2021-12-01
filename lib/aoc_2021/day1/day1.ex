@@ -1,4 +1,4 @@
-defmodule Day1 do
+defmodule Aoc2021.Day1 do
   import Input
 
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
