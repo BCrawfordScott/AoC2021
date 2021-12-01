@@ -8,6 +8,6 @@ defmodule Input do
     filename
     |> read
     |> String.replace("\r", "")
-    |> String.split("\m", trim: true)
+    |> String.split("\n", trim: true)
   end
 end
