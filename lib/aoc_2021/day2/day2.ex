@@ -1,8 +1,7 @@
 defmodule Aoc2021.Day2 do
-  import Input
 
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
-  @test_file Path.dirname(__ENV__.file) <> "/test.txt"
+  # @test_file Path.dirname(__ENV__.file) <> "/test.txt"
 
   def part1 do
     parse_input()
@@ -30,7 +29,7 @@ defmodule Aoc2021.Day2 do
   defp input_command(["down", units], {current_depth, current_position}), do: {current_depth + units, current_position}
   defp input_command(["up", units], {current_depth, current_position}), do: {current_depth - units, current_position}
 
-  defp process_command(["forward", units], {current_depth, current_position, current_aim}), do: { current_depth + (current_aim * units), current_position + units, current_aim }
+  defp process_command(["forward", units], {current_depth, current_position, current_aim}), do: {current_depth + (current_aim * units), current_position + units, current_aim}
   defp process_command(["down", units], {current_depth, current_position, current_aim}), do: {current_depth, current_position, current_aim + units}
   defp process_command(["up", units], {current_depth, current_position, current_aim}), do: {current_depth, current_position, current_aim - units}
 

@@ -1,8 +1,7 @@
 defmodule Aoc2021.Day1 do
-  import Input
 
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
-  @test_file Path.dirname(__ENV__.file) <> "/test.txt"
+  # @test_file Path.dirname(__ENV__.file) <> "/test.txt"
 
   # First attempt, naive solution
   def part1 do
