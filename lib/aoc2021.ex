@@ -5,13 +5,20 @@ defmodule Aoc2021 do
 
   alias Aoc2021.Day1, as: Day1
   alias Aoc2021.Day2, as: Day2
+  alias Aoc2021.Day3, as: Day3
 
   def solve do
     # Day 1
     IO.puts "Day1, part 1: #{Day1.refactor_part1()}"
     IO.puts "Day1, part 2: #{Day1.refactor_part2()}"
+    IO.puts ""
     # Day 2
     IO.puts "Day2, part 1: #{Day2.part1()}"
     IO.puts "Day2, part 2: #{Day2.part2()}"
+    IO.puts ""
+    # Day 2
+    IO.puts "Day3, part 1: #{Day3.part1()}"
+    IO.puts "Day3, part 2: #{Day3.part2()}"
+    IO.puts ""
   end
 end
