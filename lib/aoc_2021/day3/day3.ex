@@ -1,7 +1,5 @@
 defmodule Aoc2021.Day3 do
 
-  use Bitwise
-
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
   @test_file Path.dirname(__ENV__.file) <> "/test.txt"
 
