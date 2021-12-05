@@ -10,7 +10,7 @@ defmodule Aoc2021.Day5 do
     path
     |> parse_input()
     |> Enum.filter(&horizontal_vertical_line/1)
-    |> Enum.reduce(%{}, fn line, line_record -> record_line(line, line_record) end)
+    |> Enum.reduce(%{}, &record_line/2)
     |> Map.values()
     |> Enum.count(fn val -> val > 1 end)
   end
@@ -19,7 +19,7 @@ defmodule Aoc2021.Day5 do
   def part2(path) do
     path
     |> parse_input()
-    |> Enum.reduce(%{}, fn line, line_record -> record_line(line, line_record) end)
+    |> Enum.reduce(%{}, &record_line/2)
     |> Map.values()
     |> Enum.count(fn val -> val > 1 end)
   end
@@ -37,11 +37,10 @@ defmodule Aoc2021.Day5 do
     path
     |> Input.to_array() # Read the input file and split on \n
     |> Enum.map(fn point_range ->
-      [start_point, end_point] = String.split(point_range, " -> ", trim: true)
-      start_coords = String.split(start_point, ",", trim: true) |> Enum.map(&String.to_integer/1)
-      end_coords = String.split(end_point, ",", trim: true) |> Enum.map(&String.to_integer/1)
-
-      {start_coords, end_coords}
+      point_range
+      |> String.split(" -> ", trim: true)
+      |> Enum.map(fn line -> String.split(line, ",", trim: true ) |> Enum.map(&String.to_integer/1) end)
+      |> List.to_tuple()
     end)
   end
 
