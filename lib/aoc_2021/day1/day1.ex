@@ -3,14 +3,16 @@ defmodule Aoc2021.Day1 do
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
   # @test_file Path.dirname(__ENV__.file) <> "/test.txt"
 
-  def part1 do
-    @input_file
+  def part1, do: part1(@input_file)
+  def part1(path) do
+    path
     |> parse_input()
     |> compare(1)
   end
 
-  def part2 do
-    @input_file
+  def part2, do: part1(@input_file)
+  def part2(path) do
+    path
     |> parse_input()
     |> compare(3)
   end

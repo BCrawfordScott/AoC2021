@@ -1,13 +1,9 @@
 defmodule Aoc2021.Day3 do
 
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
-  @test_file Path.dirname(__ENV__.file) <> "/test.txt"
-
-  def test(:part_one), do: part1(@test_file)
-  def test(:part_two), do: part2(@test_file)
 
   def part1, do: part1(@input_file)
-  defp part1(file) do
+  def part1(file) do
     computed = file
     |> Input.to_array()
     |> Enum.map(&to_individual_ints/1)
@@ -20,7 +16,7 @@ defmodule Aoc2021.Day3 do
   end
 
   def part2, do: part2(@input_file)
-  defp part2(file) do
+  def part2(file) do
     input_array = file
     |> Input.to_array()
 

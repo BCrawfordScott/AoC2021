@@ -1,9 +1,5 @@
 defmodule Aoc2021.Day5 do
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
-  @test_file Path.dirname(__ENV__.file) <> "/test.txt"
-
-  def test(:part_one), do: part1(@test_file)
-  def test(:part_two), do: part2(@test_file)
 
   def part1, do: part1(@input_file)
   def part1(path) do

@@ -1,21 +1,21 @@
 defmodule Aoc2021.Day2 do
 
   @input_file Path.dirname(__ENV__.file) <> "/input.txt"
-  # @test_file Path.dirname(__ENV__.file) <> "/test.txt"
 
-  def part1 do
-    parse_input()
+  def part1, do: part1(@input_file)
+  def part1(file) do
+    parse_input(file)
     |> Enum.reduce({0, 0}, &process/2)
     |> compute_position()
   end
 
-  def part2 do
-    parse_input()
+  def part2, do: part2(@input_file)
+  def part2(file) do
+    parse_input(file)
     |> Enum.reduce({0, 0, 0}, &process/2)
     |> compute_position()
   end
 
-  defp parse_input, do: parse_input(@input_file)
   defp parse_input(file) do
     file
     |> Input.to_array()
